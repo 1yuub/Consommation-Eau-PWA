@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consommation d'Eau</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h2>Suivi de Consommation d'Eau</h2>
+
+    <div id="loginForm">
+        <input type="text" id="nom" placeholder="Nom">
+        <input type="tel" id="telephone" placeholder="Téléphone">
+        <button onclick="ajouterUtilisateur()">S'inscrire</button>
+    </div>
+
+    <div id="dashboard" style="display:none;">
+        <h3>Consommation</h3>
+        <input type="number" id="consoActuelle" placeholder="Consommation actuelle">
+        <input type="number" id="tarifActuel" placeholder="Tarif actuel (DH)">
+        <button onclick="mettreAJourConsommation()">Mettre à jour</button>
+
+        <h3>Historique</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Consommation Actuelle</th>
+                    <th>Total</th>
+                    <th>Tarif Total (DH)</th>
+                </tr>
+            </thead>
+            <tbody id="userTable"></tbody>
+        </table>
+    </div>
+</body>
+</html>
